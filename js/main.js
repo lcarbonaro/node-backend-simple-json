@@ -1,7 +1,8 @@
 document.querySelector('#clickMe').addEventListener('click', makeReq);
 
-document.querySelector('#btnCoinFlip').addEventListener('click', makeCoinFlipReq)
 
+// added for Coin Flip
+document.querySelector('#btnCoinFlip').addEventListener('click', makeCoinFlipReq)
 
 async function makeCoinFlipReq() {  
   const res = await fetch(`/coin`);
@@ -9,6 +10,8 @@ async function makeCoinFlipReq() {
   console.log(data);
   document.querySelector("#h2CoinFlipResult").textContent = data.flip;
 }
+/**/
+
 
 async function makeReq(){
 

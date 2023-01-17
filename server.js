@@ -64,7 +64,7 @@ const server = http.createServer((req, res) => {
     });
 
 
-
+  // added for Coin Flip
   } else if (page === '/coin') {
     let rand = Math.ceil( Math.random() * 2 ); // gives 1 or 2
     let flipRes = rand === 1 ? "HEADS" : "TAILS";
@@ -74,9 +74,12 @@ const server = http.createServer((req, res) => {
     }
     res.end(JSON.stringify(objToJson));
   }
+  // NOTE: Need to do npm init -y to create a package.json
+  // which is need by Cyclic
+  /**/
   
   
-  else {
+  else {    
     /*
     figlet('404!!', function(err, data) {
       if (err) {
@@ -86,7 +89,7 @@ const server = http.createServer((req, res) => {
       }
       res.write(data);
       res.end();
-    });
+    });    
     */
   }
 });
